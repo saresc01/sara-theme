@@ -1,0 +1,439 @@
+/*
+Theme Name: Sara Portfolio
+Author: Sara Escallon
+*/
+
+/*-----------------------------------------------------------------------------------typography----------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+/* -------------------------------------------------------------- Reset default, color common in all page-----------------------------------------------------------------------*/
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'lato';
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;   /*---- el relleno y el borde incluidos en el ancho y alto total de los elementos---*/
+}
+
+:root{
+  --bg-color: #1C1C1C;
+  --text-color: #fcfcfc;  
+  --main-color: #f6df00;
+  --sec-color: #f65900;
+  --cont-color: #3fbaff;     
+}
+
+body {                     /*-------tamaños generales vista ordenador, modificados para el movil abajo  --------*/
+  background-color: var(--bg-color) !important;    
+  color: var(--text-color) !important; 
+  font-family: 'Lato', sans-serif ;
+}
+
+h1{ 
+  font-family: "Sora", sans-serif !important; 
+  font-size: 60px !important;
+  font-weight: bold !important; 
+  line-height: 0.9 !important;  
+}
+
+p{
+  line-height: 0.8;  
+}
+
+.card-body p {
+  line-height: 1.2; /* card text */
+}
+
+.myport {                         /*---------- secondary color for details in text------------ */
+  color: var(--sec-color);    
+}
+
+/* ----------------------------------------------------------------- Header  ----------------------------------------------------------------------------------------------*/
+header{
+  position:static; /* fixed if I want to be on the top always*/
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center; 
+  padding: 20px 120px;
+  background-color: var(--bg-color);
+  transition: all ease .45s;
+  margin-bottom: 20px;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  margin: auto;   
+}
+
+.navbar a{
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-color);
+  margin: 0 25px;
+  transition: all ease .50s;
+  text-decoration: none;
+}
+
+.navbar a:hover{
+  color: var(--main-color);
+}
+
+.navbar a.active{
+  color: var(--main-color);
+}
+
+/* ----------------------------------------------------------------------------- I am --------------------------------------------------------------------------------------*/
+
+.home {
+  color: var(--text-color); 
+  position: relative;    
+  display: flex;
+  align-items: center;  
+  margin-top: 60px;
+  margin-bottom: 120px;
+  padding: 0px 40px 0px 40px;
+  margin: 20px 0 30px 0;    
+}
+
+.home-row {
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;   
+  flex-direction: row;  
+}
+
+.myname{
+  color: var(--main-color);   
+  font-size: 80px;
+  font-weight: bold; 
+  line-height: 0.9; 
+  font-family: 'Sora'; 
+}
+
+.home-img {  
+  border: 8px var(--main-color) solid;
+  justify-content: right;
+  margin-bottom: 80px;
+}
+
+.overlay-1 {                                            /*---------------- Cuadrados desplazados 1 y 2 ---------------- */
+  position: absolute;
+  top: -25px; 
+  left: -30px; 
+  width: 105%; 
+  height: 105%; 
+  border: 4px solid var(--sec-color);
+  z-index: 1;
+}
+.overlay-2 {
+  position: absolute;
+  top: 20px; 
+  left: 20px; 
+  width: 100%; 
+  height: 100%; 
+  border: 4px solid var(--cont-color); 
+  z-index: 1;
+}
+
+.btn{                                                          /*----------------------- main btn ---------------*/
+  border: var(--main-color) solid 2px !important;
+  color: var(--text-color) !important;
+  border-radius: 0 !important;
+  margin-top: 20px !important;
+  padding: 10px 60px !important;
+  margin-bottom: 40px !important;
+}
+.btn:hover{
+  border: var(--main-color) solid 2px;
+  color: var(--text-color) ;
+  box-shadow: 0 4px 8px var(--main-color);
+  transition: all 0.2s ease;
+}
+
+.custom-btn {
+  padding: 10px 120px; 
+  font-size: 16px; 
+}
+
+/*------------------------------------------------------------------------------- My projects main page--------------------------------------------------------------*/
+
+.container {
+  max-width: 1200p;
+  margin: 0 auto;
+}
+
+.image-container {
+  position: relative;  
+  margin-bottom: 30px;
+}
+
+.image-container img {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  border: 4px solid transparent;      
+  transition: 0.3s ease; 
+}
+
+.image-container:hover {
+  border: var(--sec-color) solid 4px;
+}
+
+.image-container .overlay {      
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  bottom: 0;
+  width: 100%;
+  height: 25%;  
+  background-color: var(--bg-color); 
+  color: var(--text-color);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  opacity: 0;  
+  transition: opacity 0.3s ease; 
+}
+
+.image-container:hover img {
+  border: var(--sec-color) 4px;
+}
+
+.image-container:hover .overlay {
+  opacity: 0.8;   
+}
+
+.section-title{
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+/*--------------------------------------------------------------------------------Third section, hire me -------------------------------------------------------------------*/
+.hire{
+  color: var(--cont-color);
+}
+
+.yell{
+  color: var(--main-color);
+}
+
+.hire-img img{
+  max-width: 100%; 
+  height: auto; 
+  border: var(--main-color) 4px solid;  
+  justify-content: left;
+  margin-top: 40px;
+}
+
+.hireme {
+  color: var(--text-color); 
+  position: relative;   
+  padding-top: 50px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;      
+} 
+
+.overlay-3 {                                            /*---------------- Cuadrados desplazados 3 y 4 ---------------- */
+  position: absolute;
+  top: -25px; 
+  left: -30px; 
+  width: 105%; 
+  height: 105%; 
+  border: 4px solid var(--cont-color);
+  z-index: 1;
+}
+.overlay-4 {
+  position: absolute;
+  top: 20px; 
+  left: 20px; 
+  width: 100%; 
+  height: 100%; 
+  border: 4px solid var(--sec-color); 
+  z-index: 1;
+}
+
+/* ------------------------------------------------------------------------ Projects page-----------------------------------------------------------------------------------*/
+.project-item{    
+  padding: 20px 5px;  
+}
+
+.filter-button{
+  padding: 10px 30px; 
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;
+  text-align: center; 
+}
+
+.projects img{
+  border: #f6df00 3px solid;
+}
+
+.project-title{          /*---------------card-------------------*/
+  text-align:right; 
+}
+
+.card{
+  background-color: var(--bg-color) !important;
+  margin-bottom: 40px !important;
+  margin-top: 40px !important;
+  border: transparent !important;  
+}
+
+.card-body {
+  margin: 40px; 
+}
+
+.video {
+  height: auto;
+}
+
+#video iframe {
+  width: 100%;
+  height: 80vh;
+}
+
+/*---------------------------------------------------------------------- About me--------------------------------------------------------------------------------------------*/
+.videocv .btn{
+  margin: 5px;
+  width: 50%;
+}
+
+.videocv {
+  width: 100%;
+  height: auto;
+}
+
+.me-img{
+  border: 8px var(--main-color) solid;
+  justify-content: right;
+  margin-bottom: 80px;
+}
+
+/*------------------------------------------------------------------------ Footer -----------------------------------------------------------------------------------*/
+.fab{
+  color: var(--text-color);
+  padding: 10px 20px;
+  font-size: 40px;
+}
+
+.fas{
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #f1f1f1;  
+}
+.contact-info {
+  text-align: left;  
+}
+
+.footer{
+  align-items: center;
+  justify-content: center;
+}
+
+/*------------------------------------------------------- Responsive ------------------------------------------------------*/
+
+  /* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* For mobile phones: */
+@media screen and (max-width: 720px){
+
+  .navbar{    
+    margin: 20px 0px 20px 20px;   
+  }
+
+  .header{
+    margin-bottom: 0;
+  } 
+
+  .navbar a{
+    font-size: 16px;    
+  }
+
+  .home-img{
+    margin-bottom: 80px;
+  }
+
+  .home {
+    padding: 0px 40px 0px 40px;
+    margin: 20px 0 30px 0;
+  }
+
+  .myname{
+    font-size: 40px;
+  }
+
+  .btn{
+    width: 100%;
+  }
+
+  .p{ 
+    font-size: 16px;
+  }
+
+  .h1{
+    font-size: 20px;
+  }
+  .projects-home{
+    margin-bottom: 120px;
+  }
+
+  .hireme{
+    padding: 0px 40px 0px 40px;
+    margin: 100px 0 100px 0;
+  } 
+
+  .h5{
+    font-size: 16px;
+  }
+  .me-text{
+    padding-bottom: 30px;    
+  }
+  
+  .hire-text{
+    padding-top: 40px;
+    font-size: 16px;
+  }
+
+  .h3{
+    font-size: 24px;
+  }
+  .contact-info{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .social-icon{
+    margin-bottom: 20px;
+  }
+
+   
+}
+
+
+.reverse-row {
+  flex-direction: row-reverse;
+}
