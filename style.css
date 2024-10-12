@@ -110,7 +110,7 @@ header{
 }
 
 .myname{
-  color: var(--cont-color);
+  color: var(--main-color);
   font-size: 80px;
   font-weight: bold; 
   line-height: 0.9; 
